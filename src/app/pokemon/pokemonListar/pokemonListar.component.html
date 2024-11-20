@@ -1,0 +1,17 @@
+<h1>Lista de pokemones</h1>
+<div class="pagina">
+  <div class="card-container">
+    <div class="card" *ngFor="let s of pokemones">
+      <div (click)="onSelected(s)">
+        <img src="{{ s.sprites.front_default}}" alt="Foto de {{ s.name }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ s.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="detail" *ngIf="selected">
+    <app-pokemonDetalle
+    [pokemondetail]="selectedPokemon"></app-pokemonDetalle>
+  </div>
+</div>

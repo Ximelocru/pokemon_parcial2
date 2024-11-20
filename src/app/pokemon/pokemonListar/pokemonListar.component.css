@@ -1,0 +1,33 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    justify-items: center;
+    align-items: stretch; 
+    margin: 3%;
+}
+  
+.card {
+    width: 200px;
+    border: 1px solid #ddd; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10%; 
+    margin-bottom: 5%; 
+}
+  
+.card img {
+    width: 100%; 
+    height: auto;
+    max-height: 150px; 
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(2, auto); 
+}
+
+.detail {
+    margin: 3%; 
+}

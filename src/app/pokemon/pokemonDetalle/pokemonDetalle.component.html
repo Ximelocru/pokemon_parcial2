@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <p class="h3 p-3"> {{pokemondetail.name}}</p>
+  <div class="row">
+    <div class="col-2">
+      <img
+        class="img-fluid"
+        src="{{pokemondetail.sprites.front_default}}"
+        alt="{{pokemondetail.name}}"
+      />
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Id</dt>
+        <dd class="id" > {{pokemondetail.id}}</dd>
+        <dt>Name</dt>
+        <dd class="name" > {{pokemondetail.name}}</dd>
+        <dt>Height</dt>
+        <dd class="height" > {{pokemondetail.height}}</dd>
+        <dt>Weight</dt>
+        <dd class="weight" > {{pokemondetail.weight}}</dd>
+        <dt>abilities</dt>
+        <dd class="abilities" *ngFor="let a of pokemondetail.abilities"> 
+          {{ a.ability.name }}
+        </dd>
+        <dt>types</dt>
+        <dd class="types" *ngFor="let a of pokemondetail.types"> 
+          <a routerLink="/type/{{a.type.name}}">{{a.type.name}}</a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
